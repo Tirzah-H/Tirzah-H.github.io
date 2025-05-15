@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Image Tooltip</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+    .hotspot {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 5px;
+      border: 1px solid gray;
+      display: none;
+      z-index: 2;
+    }
+    .hover-area {
+      position: absolute;
+      cursor: pointer;
+    }
+    .hover-area:hover + .hotspot {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="https://Tirzah-H.github.io/MISC095.312_solomon_theme" alt="Interactive Image" width="800" height="auto">
+
+    <!-- Example hover region -->
+    <div class="hover-area" style="top: 100px; left: 200px; width: 100px; height: 100px;"></div>
+    <div class="hotspot" style="top: 210px; left: 200px;">This is area 1</div>
+
+    <div class="hover-area" style="top: 250px; left: 400px; width: 80px; height: 80px;"></div>
+    <div class="hotspot" style="top: 330px; left: 400px;">This is area 2</div>
+  </div>
+</body>
+</html>
